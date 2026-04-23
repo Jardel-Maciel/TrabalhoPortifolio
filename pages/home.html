@@ -56,7 +56,7 @@
       </article>
     </section>
     <section>
-      <article>
+      <article class="portfolio">
         <h1>PORTFÓLIO.</h1>
 
         <div class="container-card">
@@ -68,6 +68,28 @@
           <div class="card"></div>
         </div>
       </article>
+    </section>
+
+    <section class="contatos">
+      <h1>CONTATOS</h1>
+
+      <form action="POST">
+        <input type="text" placeholder="Digite seu nome" />
+        <input
+          type="email"
+          name="email"
+          id="email"
+          placeholder="Digite seu e-mail"
+        />
+        <textarea
+          name="msg"
+          id="msg"
+          rows="10"
+          cols="50"
+          placeholder="Digite sua mensagen aqui."
+        ></textarea>
+        <button type="button" onclick="enviarForm()">Enviar</button>
+      </form>
     </section>
   </body>
 </html>
