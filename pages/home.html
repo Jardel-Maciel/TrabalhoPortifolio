@@ -15,7 +15,7 @@
         <a href="#home"
           ><img src="/assets/Logo-clara.png" class="logo logo-escura"
         /></a>
-
+        <div class="hamburger" onclick="toggleMenu()">☰</div>
         <ul class="menu">
           <li><a href="#cont-sobre1">Sobre</a></li>
           <li><a href="#formacao">Formação</a></li>
@@ -23,7 +23,7 @@
           <li><a href="#contatos">Contato</a></li>
         </ul>
       </nav>
-      <label for="tema">Tema escuto</label>
+      <label for="tema" class="tema">Tema escuro</label>
       <div class="container" onclick="toggle()">
         <div id="seletor" class="seletor"></div>
       </div>
@@ -199,6 +199,7 @@
           placeholder="Digite sua mensagen aqui."
         ></textarea>
         <button type="button" onclick="enviarForm()">Enviar</button>
+        <p id="mensagem"></p>
       </form>
     </section>
   </body>
@@ -225,5 +226,33 @@
 
       prevScrollpos = currentScrollPos;
     };
+
+    function enviarForm() {
+      const nome = document.querySelector(".input[type='text']").value;
+      const email = document.getElementById("email").value;
+      const msg = document.getElementById("msg").value;
+
+      // validação simples
+      if (nome === "" || email === "" || msg === "") {
+        alert("Preencha todos os campos!");
+        return;
+      }
+
+      // validação básica de email
+      if (!email.includes("@") || !email.includes(".")) {
+        alert("Digite um e-mail válido!");
+        return;
+      }
+
+      // simulação de envio
+      alert("Mensagem enviada com sucesso! 🚀");
+
+      // limpa o formulário
+      document.querySelector(".form").reset();
+    }
+    function toggleMenu() {
+      const menu = document.querySelector(".menu");
+      menu.classList.toggle("ativo");
+    }
   </script>
 </html>

@@ -51,16 +51,15 @@ body.dark {
 header {
   display: flex;
   justify-content: center;
-  gap: 40px;
+
   align-items: center;
-  margin-top: 20px;
+  margin-top: 18px;
   position: fixed; /* Fixa a barra no topo */
   top: 0;
   width: 100%;
-  height: 60px; /* Altura definida é importante */
+  height: 50px; /* Altura definida é importante */
   transition: top 0.3s; /* Suaviza a transição */
   z-index: 1000;
-  
 }
 .logo-escura {
   display: none;
@@ -79,7 +78,6 @@ body.dark .logo-escura {
   justify-content: center;
   align-items: center;
   gap: 40px;
-  
 }
 
 .logo {
@@ -170,17 +168,14 @@ h1 {
 
 /* SOBRE */
 .cont-sobre {
-  display: grid;
-  grid-template-columns: 100px 100px 700px;
-  grid-template-rows: 80px 500px;
-  height: 40vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   justify-content: center;
   text-align: center;
-}
-
-.cont-sobre h1 {
-  grid-column-start: 2;
-  grid-row-start: 1;
+  max-width: 800px;
+  margin: 0 auto;
+  gap: 20px;
 }
 
 .cont-sobre p {
@@ -192,49 +187,44 @@ h1 {
 
 .cont-sobre1 {
   width: 100%;
-  height: 100vh;
+  height: 70vh;
   margin-bottom: 100px;
 }
 
 /* FORMAÇÃO */
 .formacao {
-  display: grid;
-  grid-template-columns: 100px 100px 700px;
-  grid-template-rows: 80px 500px;
-  height: 30vh;
-}
-
-.formacao h1 {
-  grid-column-start: 2;
-  grid-row-start: 1;
-}
-
-.formacao p {
-  grid-column-start: 3;
-  grid-row-start: 2;
-  font-size: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 20px;
+  font-size: 1rem;
   width: 100%;
+  height: 10vh;
+
 }
+.formacao p{
+  font-size: 2rem;
+  margin-bottom: 100px;
+}
+
 
 /* PORTFOLIO */
 .titulo-portfolio {
-  display: grid;
-  grid-template-columns: 100px 100px 700px;
-  grid-template-rows: 80px 500px;
-  height: 10vh;
-}
-
-.titulo-portfolio h1 {
-  grid-column-start: 2;
-  grid-row-start: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+margin-bottom: 50px;  text-align: center;
 }
 
 /* CARDS */
 .card-1 {
-  padding: 50px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 30px;
+  padding: 50px;
 }
 
 .card {
@@ -355,4 +345,131 @@ textarea {
 body.dark .input::placeholder,
 body.dark textarea::placeholder {
   color: rgba(255, 255, 255, 0.7);
+}
+/* BOTÃO HAMBURGUER */
+.hamburger {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* ================= MOBILE (360px) ================= */
+@media (max-width: 400px) {
+
+  body {
+    padding-top: 70px;
+  }
+
+  header {
+    height: 50px;
+    padding: 0 10px;
+  }
+
+  .navegation {
+    gap: 10px;
+  }
+
+  .logo {
+    width: 70px;
+  }
+
+  /* NÃO ESCONDE MAIS */
+  .container {
+    display: flex;
+  }
+
+  .tema {
+    display: block;
+    font-size: 0.8rem;
+  }
+
+  /* HOME */
+  .home {
+    flex-direction: column;
+    height: auto;
+    padding: 30px 15px;
+    gap: 20px;
+    text-align: center;
+  }
+
+  .home img {
+    width: 180px;
+  }
+
+  .home h1 {
+    font-size: 1.6rem;
+  }
+
+  /* SOBRE */
+  .cont-sobre {
+    padding: 0 15px;
+  }
+
+  .cont-sobre p {
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+
+  /* FORMAÇÃO */
+  .formacao {
+    height: auto;
+  }
+
+  .formacao p {
+    font-size: 1rem;
+    margin-bottom: 40px;
+  }
+
+  /* PORTFÓLIO */
+  .card-1 {
+    padding: 15px;
+    gap: 20px;
+  }
+
+  .card {
+    width: 100%;
+    height: auto;
+  }
+
+  /* CONTATO */
+  .contatos {
+    height: auto;
+    padding: 30px 15px;
+  }
+
+  .form {
+    width: 100%;
+    margin-top: 40px;
+  }
+
+  .input,
+  textarea {
+    padding: 15px;
+    font-size: 0.9rem;
+  }
+
+  /* MENU */
+  .hamburger {
+    display: block;
+  }
+
+  .menu {
+    position: absolute;
+    top: 50px;
+    right: 0;
+    width: 100%;
+    background-color: var(--cor-fundo);
+    flex-direction: column;
+    align-items: center;
+    display: none;
+    padding: 20px 0;
+  }
+
+  .menu.ativo {
+    display: flex;
+  }
+
+  .menu a {
+    font-size: 1rem;
+  }
 }
