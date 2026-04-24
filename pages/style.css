@@ -1,0 +1,21 @@
+:root{
+    --cor-fundo: rgb(218, 210, 210);
+    --cor-texto: #4b4453;
+    --cor-titulo: #c34a36;
+
+}
+
+
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+body{
+   /*background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);*/
+    background-color: var(--cor-fundo);
+}
