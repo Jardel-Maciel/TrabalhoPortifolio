@@ -18,6 +18,9 @@
   box-sizing: border-box;
   font-family: var(--textos);
 }
+html{
+  scroll-behavior: smooth;
+}
 
 /* TRANSIÇÃO SUAVE */
 body,
@@ -89,7 +92,7 @@ body.dark .logo-escura {
 /* BOTÃO DARK MODE */
 .container {
   display: flex;
-  background-color: #ccc;
+  background-color:#4b4453;
   width: 40px;
   height: 22px;
   border-radius: 50px;
@@ -99,7 +102,7 @@ body.dark .logo-escura {
 }
 
 .seletor {
-  background-color: #011237;
+  background-color: #ffffff;
   width: 20px;
   height: 20px;
   border-radius: 50%;
@@ -112,6 +115,7 @@ body.dark .logo-escura {
 
 .container.ativo .seletor {
   transform: translateX(18px);
+  background-color: #4b4453;
 }
 
 /* HOME */
@@ -158,6 +162,8 @@ h1 {
   grid-template-columns: 100px 100px 700px;
   grid-template-rows: 80px 500px;
   height: 40vh;
+  justify-content: center;
+  text-align: center;
 }
 
 .cont-sobre h1 {
