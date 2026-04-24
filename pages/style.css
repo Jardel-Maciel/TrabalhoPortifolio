@@ -53,6 +53,17 @@ header {
   align-items: center;
   margin-top: 20px;
 }
+.logo-escura {
+  display: none;
+}
+
+body.dark .logo-clara {
+  display: none;
+}
+
+body.dark .logo-escura {
+  display: block;
+}
 
 .navegation {
   display: flex;
