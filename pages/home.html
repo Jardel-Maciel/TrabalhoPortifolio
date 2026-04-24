@@ -3,13 +3,13 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css" />
     <title>Jardel Maciel</title>
   </head>
   <body>
     <header>
       <nav class="navegation">
-        <img src="/assets/Logo.png" alt="logo do site" class="logo"/>
+        <img src="/assets/Logo.png" alt="logo do site" class="logo" />
 
         <ul class="menu">
           <li><a href="#">Sobre</a></li>
@@ -28,26 +28,31 @@
         src="/assets/FotoPerfil/Foto-perfil.jpg"
         alt="fotografia de jardel maciel desenvolvedor front-and"
       />
-      <h3>Olá, eu sou Jardel.</h3>
-      <h1>
-        Desenvolvedor <br />
-        Front-and
-      </h1>
+      <div>
+        <h3>Olá, eu sou Jardel.</h3>
+        <h1>
+          Desenvolvedor <br />
+          Front-and
+        </h1>
+      </div>
     </section>
 
-    <section>
+    <section class="cont-sobre1">
       <article class="cont-sobre">
         <h1>SOBRE.</h1>
         <p>
-          Estudante de Ciência da Computação (3o semestre), em transição de
-          carreira para a área de tecnologia, com 9 anos de experiência
-          profissional desenvolvendo disciplina, organização e responsabilidade.
+          Estudante de Ciência da Computação, em transição de carreira para a
+          área de tecnologia, com 9 anos de experiência profissional
+          desenvolvendo disciplina, organização e responsabilidade.
+          <br /><br />
           Possuo conhecimentos em desenvolvimento front-end com HTML, CSS,
           JavaScript e React.js com TypeScript, além de experiência em back-end
-          com Python e Java. Desenvolvi projetos práticos aplicando lógica de
-          programação, estrutura de dados e regras de negócio, incluindo
-          sistemas de cálculo de planos de saúde, controle de estoque, aplicação
-          para pizzaria e simulação de sistema bancário.
+          com Python e Java.
+          <br /><br />
+          Desenvolvi projetos práticos aplicando lógica de programação,
+          estrutura de dados e regras de negócio, incluindo sistemas de cálculo
+          de planos de saúde, controle de estoque, aplicação para pizzaria e
+          simulação de sistema bancário.
         </p>
       </article>
     </section>
@@ -58,19 +63,96 @@
         <p>Ciência Da Computação - 3º Semestre</p>
       </article>
     </section>
-    <section>
-      <article class="portfolio">
+    <div class="titulo-portfolio">
         <h1>PORTFÓLIO.</h1>
+      </div>
+    <section class="card-1">
+      
+      <div class="card">
+        <img src="assets/download.jpg" alt="" />
 
-        <div class="container-card">
-          <div class="card"></div>
-          <div class="card"></div>
-          <div class="card"></div>
-          <div class="card"></div>
-          <div class="card"></div>
-          <div class="card"></div>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere,
+          fuga! Perferendis magnam ducimus numquam ut quibusdam consectetur
+          rerum quis facere?
+        </p>
+
+        <div class="button">
+          <button>Ola</button>
+          <button>Mundi</button>
         </div>
-      </article>
+      </div>
+
+      <div class="card">
+        <img src="assets/download.jpg" alt="" />
+
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere,
+          fuga! Perferendis magnam ducimus numquam ut quibusdam consectetur
+          rerum quis facere?
+        </p>
+
+        <div class="button">
+          <button>Ola</button>
+          <button>Mundi</button>
+        </div>
+      </div>
+      <div class="card">
+        <img src="assets/download.jpg" alt="" />
+
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere,
+          fuga! Perferendis magnam ducimus numquam ut quibusdam consectetur
+          rerum quis facere?
+        </p>
+
+        <div class="button">
+          <button>Ola</button>
+          <button>Mundi</button>
+        </div>
+      </div>
+      <div class="card">
+        <img src="assets/download.jpg" alt="" />
+
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere,
+          fuga! Perferendis magnam ducimus numquam ut quibusdam consectetur
+          rerum quis facere?
+        </p>
+
+        <div>
+          <button>Ola</button>
+          <button>Mundi</button>
+        </div>
+      </div>
+      <div class="card">
+        <img src="assets/download.jpg" alt="" />
+
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere,
+          fuga! Perferendis magnam ducimus numquam ut quibusdam consectetur
+          rerum quis facere?
+        </p>
+
+        <div class="button">
+          <button>Ola</button>
+          <button>Mundi</button>
+        </div>
+      </div>
+      <div class="card">
+        <img src="assets/download.jpg" alt="" />
+
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere,
+          fuga! Perferendis magnam ducimus numquam ut quibusdam consectetur
+          rerum quis facere?
+        </p>
+
+        <div class="button">
+          <button>Ola</button>
+          <button>Mundi</button>
+        </div>
+      </div>
     </section>
 
     <section class="contatos">
@@ -96,12 +178,12 @@
     </section>
   </body>
   <script>
-    function toggle(){
-      const container = document.querySelector('.container');
+    function toggle() {
+      const container = document.querySelector(".container");
       const body = document.body;
 
-      container.classList.toggle("ativo")
-      body.classList.toggle("dark")
+      container.classList.toggle("ativo");
+      body.classList.toggle("dark");
     }
   </script>
 </html>
