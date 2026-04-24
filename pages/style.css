@@ -1,4 +1,3 @@
-
 :root {
   --cor-fundo: rgb(218, 210, 210);
   --cor-texto: #4b4453;
@@ -133,12 +132,13 @@ body.dark .logo-escura {
     rgba(0, 0, 0, 0.22) 0px 15px 12px;
   animation: subirDescer 3s ease-in-out infinite;
 }
-.home h1{
-    font-size: 4rem;
+.home h1 {
+  font-size: 4rem;
 }
 
 @keyframes subirDescer {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0);
   }
   50% {
@@ -242,24 +242,7 @@ h1 {
 }
 
 /* BOTÕES */
-button {
-  height: 50px;
-  width: 100px;
-  border: none;
-  border-radius: 10px;
 
-  background-color: var(--cor-botao);
-  color: var(--cor-texto);
-
-  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
-
-  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-}
-
-button:hover {
-  background-color: var(--cor-hover);
-  color: #fff;
-}
 
 /* IMAGENS DOS CARDS */
 .card img {
@@ -268,4 +251,77 @@ button:hover {
   border-radius: 20px 0px;
   margin-top: -30px;
 }
+/*estilização da aba de contatos*/
+.contatos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 300px;
+  justify-content: center;
+  margin-top: 80px;
+}
+.input {
+  height: 30px;
+  outline: none;
+  border: none;
+  padding: 20px;
+  border-radius: 40px;
+  
+  background: rgba(255, 255, 255, 0);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4.8px);
+  -webkit-backdrop-filter: blur(4.8px);
+  border: 1px solid rgba(255, 255, 255, 0.41);
+}
+textarea {
+  padding: 20px;
+  outline: none;
+  background: rgba(255, 255, 255, 0);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(4.8px);
+  -webkit-backdrop-filter: blur(4.8px);
+  border: 1px solid rgba(255, 255, 255, 0.41);
+}
 
+
+.home .cssbuttons-io-button {
+  display: flex;
+  align-items: center;
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 17px;
+  padding: 0.8em 1.5em 0.8em 1.2em;
+  color: white;
+  background: #ff7d00;
+  background: linear-gradient(0deg, rgba(255, 125, 0, 1) 0%, rgba(255, 95, 109, 1) 100%);
+  border: 2px solid #ff7d00;
+  border-radius: 20em;
+}
+
+.home .cssbuttons-io-button svg {
+  margin-right: 8px;
+}
+
+.home .cssbuttons-io-button:hover {
+  border-color: white;
+  box-shadow: 0 0.5em 1.5em -0.5em #bf5800;
+}
+
+.home .cssbuttons-io-button:active {
+  box-shadow: 0 0.3em 1em -0.5em #bf5800;
+}
+a{
+    text-decoration: none;
+}
+a:visited{
+    text-decoration: none;
+}
