@@ -18,7 +18,7 @@
   box-sizing: border-box;
   font-family: var(--textos);
 }
-html{
+html {
   scroll-behavior: smooth;
 }
 
@@ -54,6 +54,13 @@ header {
   gap: 40px;
   align-items: center;
   margin-top: 20px;
+  position: fixed; /* Fixa a barra no topo */
+  top: 0;
+  width: 100%;
+  height: 60px; /* Altura definida é importante */
+  transition: top 0.3s; /* Suaviza a transição */
+  z-index: 1000;
+  
 }
 .logo-escura {
   display: none;
@@ -72,6 +79,7 @@ body.dark .logo-escura {
   justify-content: center;
   align-items: center;
   gap: 40px;
+  
 }
 
 .logo {
@@ -87,12 +95,16 @@ body.dark .logo-escura {
 .menu a {
   color: var(--cor-texto);
   text-decoration: none;
+  float: left;
+  display: block;
+
+  padding: 15px;
 }
 
 /* BOTÃO DARK MODE */
 .container {
   display: flex;
-  background-color:#4b4453;
+  background-color: #4b4453;
   width: 40px;
   height: 22px;
   border-radius: 50px;
@@ -249,7 +261,6 @@ h1 {
 
 /* BOTÕES */
 
-
 /* IMAGENS DOS CARDS */
 .card img {
   width: 100%;
@@ -279,7 +290,7 @@ h1 {
   border: none;
   padding: 20px;
   border-radius: 40px;
-  
+
   background: rgba(255, 255, 255, 0);
   border-radius: 16px;
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -298,7 +309,6 @@ textarea {
   border: 1px solid rgba(255, 255, 255, 0.41);
 }
 
-
 .home .cssbuttons-io-button {
   display: flex;
   align-items: center;
@@ -308,7 +318,11 @@ textarea {
   padding: 0.8em 1.5em 0.8em 1.2em;
   color: white;
   background: #ff7d00;
-  background: linear-gradient(0deg, rgba(255, 125, 0, 1) 0%, rgba(255, 95, 109, 1) 100%);
+  background: linear-gradient(
+    0deg,
+    rgba(255, 125, 0, 1) 0%,
+    rgba(255, 95, 109, 1) 100%
+  );
   border: 2px solid #ff7d00;
   border-radius: 20em;
 }
@@ -325,9 +339,20 @@ textarea {
 .home .cssbuttons-io-button:active {
   box-shadow: 0 0.3em 1em -0.5em #bf5800;
 }
-a{
-    text-decoration: none;
+a {
+  text-decoration: none;
 }
-a:visited{
-    text-decoration: none;
+a:visited {
+  text-decoration: none;
+}
+/* TEXTO DOS INPUTS */
+.input,
+textarea {
+  color: var(--cor-texto);
+}
+
+/* PLACEHOLDER NO DARK MODE */
+body.dark .input::placeholder,
+body.dark textarea::placeholder {
+  color: rgba(255, 255, 255, 0.7);
 }
