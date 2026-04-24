@@ -1,21 +1,86 @@
-:root{
-    --cor-fundo: rgb(218, 210, 210);
-    --cor-texto: #4b4453;
-    --cor-titulo: #c34a36;
-
+:root {
+  --cor-fundo: rgb(218, 210, 210);
+  --cor-texto: #4b4453;
+  --cor-titulo: #c34a36;
+  --textos: "Roboto", sans-serif;
+  --titulos: "Inter", sans-serif;
 }
 
-
-
-
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: var(--textos);
 }
 
+body {
+  /*background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);*/
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+}
+/*Estilização da barra de navegação*/
+header {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  align-items: center;
+  margin-top: 20px;
+}
+.navegation {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+}
+.logo {
+  width: 90px;
+}
 
-body{
-   /*background-image: linear-gradient(to right top, #051937, #004d7a, #008793, #00bf72, #a8eb12);*/
-    background-color: var(--cor-fundo);
+.menu {
+  display: flex;
+  gap: 30px;
+  list-style: none;
+}
+.menu a {
+  color: var(--cor-texto);
+  text-decoration: none;
+}
+/*Criação do modo escuro*/
+body.dark {
+  background-image: linear-gradient(
+    to right top,
+    #051937,
+    #021637,
+    #011237,
+    #020d37,
+    #050636
+  );
+  color: #ffffff;
+}
+
+.container{
+    display: flex;
+    background-color: #ccc;
+    width: 40px;
+    height: 22px;
+    border-radius: 50px;
+    align-items: center;
+    padding: 1px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.seletor{
+    background-color: #011237;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+/*estado ativo do botão*/
+.container.ativado{
+    background-color: #c34a36;
+}
+.container.ativo .seletor{
+    transform: translateX(18px);
 }

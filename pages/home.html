@@ -9,7 +9,7 @@
   <body>
     <header>
       <nav class="navegation">
-        <img src="/assets/Logo.png" alt="logo do site" />
+        <img src="/assets/Logo.png" alt="logo do site" class="logo"/>
 
         <ul class="menu">
           <li><a href="#">Sobre</a></li>
@@ -19,7 +19,9 @@
         </ul>
       </nav>
       <label for="tema">Tema escuto</label>
-      <input type="checkbox" />
+      <div class="container" onclick="toggle()">
+        <div id="seletor" class="seletor"></div>
+      </div>
     </header>
     <section class="home">
       <img
@@ -93,4 +95,13 @@
       </form>
     </section>
   </body>
+  <script>
+    function toggle(){
+      const container = document.querySelector('.container');
+      const body = document.body;
+
+      container.classList.toggle("ativo")
+      body.classList.toggle("dark")
+    }
+  </script>
 </html>
