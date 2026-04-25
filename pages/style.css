@@ -353,6 +353,17 @@ body.dark textarea::placeholder {
   font-size: 28px;
   cursor: pointer;
 }
+.bt-card{
+  padding: 10px;
+  width: 80px;
+  margin-bottom: 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: var(--cor-titulo);
+  color: var(--cor-botao);
+  font-size: 1rem;
+  font-weight: 600;
+}
 
 /* ================= MOBILE (360px) ================= */
 @media (max-width: 400px) {
@@ -404,11 +415,13 @@ body.dark textarea::placeholder {
   /* SOBRE */
   .cont-sobre {
     padding: 0 15px;
+    width: 80%;
   }
 
   .cont-sobre p {
     font-size: 1rem;
     line-height: 1.4;
+    margin-bottom: 60px;
     
   }
 
