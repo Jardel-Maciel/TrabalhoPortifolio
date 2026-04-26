@@ -175,11 +175,9 @@ h1 {
   height: 100%;
   margin: 0 auto;
   gap: 20px;
-
 }
 
 .cont-sobre p {
-
   font-size: 2rem;
   width: 100%;
 }
@@ -187,7 +185,6 @@ h1 {
 .cont-sobre1 {
   width: 100%;
   height: 100pxvh;
-
 }
 
 /* FORMAÇÃO */
@@ -201,7 +198,6 @@ h1 {
   font-size: 1rem;
   width: 100vw;
   height: 60vh;
-
 }
 .formacao p {
   font-size: 2rem;
@@ -228,7 +224,7 @@ h1 {
 
 .card {
   display: flex;
-flex-direction: column;
+  flex-direction: column;
   width: 300px;
   height: 400px;
   justify-content: center;
@@ -353,7 +349,7 @@ body.dark textarea::placeholder {
   font-size: 28px;
   cursor: pointer;
 }
-.bt-card{
+.bt-card {
   padding: 10px;
   width: 80px;
   margin-bottom: 20px;
@@ -365,11 +361,10 @@ body.dark textarea::placeholder {
   font-weight: 600;
   transition: all 1s;
 }
-.bt-card:hover{
+.bt-card:hover {
   cursor: pointer;
+  background-color: var(--cor-texto);
 }
-
-
 
 /* ================= MOBILE (360px) ================= */
 @media (max-width: 400px) {
@@ -428,7 +423,6 @@ body.dark textarea::placeholder {
     font-size: 1rem;
     line-height: 1.4;
     margin-bottom: 60px;
-    
   }
 
   /* FORMAÇÃO */
@@ -444,7 +438,7 @@ body.dark textarea::placeholder {
   /* PORTFÓLIO */
   .card-1 {
     padding: 15px;
-    gap: 20px;
+    gap: 90px;
   }
 
   .card {
