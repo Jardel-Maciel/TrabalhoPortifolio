@@ -363,7 +363,13 @@ body.dark textarea::placeholder {
   color: var(--cor-botao);
   font-size: 1rem;
   font-weight: 600;
+  transition: all 1s;
 }
+.bt-card:hover{
+  cursor: pointer;
+}
+
+
 
 /* ================= MOBILE (360px) ================= */
 @media (max-width: 400px) {
