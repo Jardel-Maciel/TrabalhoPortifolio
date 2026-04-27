@@ -34,6 +34,7 @@ button,
 body {
   background-color: var(--cor-fundo);
   color: var(--cor-texto);
+  overflow-x: hidden;
 }
 
 /* MODO ESCURO */
@@ -251,9 +252,10 @@ h1 {
 /* IMAGENS DOS CARDS */
 .card img {
   width: 100%;
-  height: 100%;
+  height: 55%;
   border-radius: 20px 0px;
   margin-top: -30px;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 /*estilização da aba de contatos*/
 .contatos {
@@ -267,7 +269,8 @@ h1 {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  width: 300px;
+  font-size: 40PX;
+  width: 600px;
   justify-content: center;
   margin-top: 80px;
 }
