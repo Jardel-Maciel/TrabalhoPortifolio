@@ -370,7 +370,7 @@ body.dark textarea::placeholder {
 }
 
 /* ================= MOBILE (360px) ================= */
-@media (max-width: 400px) {
+@media (max-width: 768px) {
   body {
     padding-top: 70px;
   }
