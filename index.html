@@ -95,12 +95,21 @@
         <img src="assets/cordel.png" alt="" />
 
         <p>
-          Projeto desnvolvido, durante o curso de html5 e css3 no curso em video.
+          Projeto desnvolvido, durante o curso de html5 e css3 no curso em
+          video.
         </p>
 
         <div class="button">
-          <a href="https://github.com/Jardel-Maciel/projeto_cordel" target="_blank"><button class="bt-card">GuitHub</button></a>
-          <a href="https://jardel-maciel.github.io/projeto_cordel/" target="_blank"><button class="bt-card">Demo</button></a>
+          <a
+            href="https://github.com/Jardel-Maciel/projeto_cordel"
+            target="_blank"
+            ><button class="bt-card">GuitHub</button></a
+          >
+          <a
+            href="https://jardel-maciel.github.io/projeto_cordel/"
+            target="_blank"
+            ><button class="bt-card">Demo</button></a
+          >
         </div>
       </div>
 
@@ -108,41 +117,66 @@
         <img src="assets/login.png" alt="" />
 
         <p>
-          Projeto desnvolvido, durante o curso de html5 e css3 no curso em video.
+          Projeto desnvolvido, durante o curso de html5 e css3 no curso em
+          video.
         </p>
 
         <div class="button">
-          <a href="https://github.com/Jardel-Maciel/projeto_login" target="_blank"><button class="bt-card">GuitHub</button></a>
-          
-         <a href="https://jardel-maciel.github.io/projeto_login/" target="_blank"><button class="bt-card">Demo</button></a> 
+          <a
+            href="https://github.com/Jardel-Maciel/projeto_login"
+            target="_blank"
+            ><button class="bt-card">GuitHub</button></a
+          >
+
+          <a
+            href="https://jardel-maciel.github.io/projeto_login/"
+            target="_blank"
+            ><button class="bt-card">Demo</button></a
+          >
         </div>
       </div>
       <div class="card">
         <img src="assets/maciel.png" alt="" />
 
         <p>
-          Projeto desnvolvido, durante o curso de html5 e css3 no curso em video.
+          Projeto desnvolvido, durante o curso de html5 e css3 no curso em
+          video.
         </p>
 
         <div class="button">
-          <a href="https://github.com/Jardel-Maciel/plano-de-saude2" target="_blank"><button class="bt-card">GuitHub</button></a>
-          <a href="https://jardel-maciel.github.io/plano-de-saude2/" target="_blank"><button class="bt-card">Demo</button></a>
+          <a
+            href="https://github.com/Jardel-Maciel/plano-de-saude2"
+            target="_blank"
+            ><button class="bt-card">GuitHub</button></a
+          >
+          <a
+            href="https://jardel-maciel.github.io/plano-de-saude2/"
+            target="_blank"
+            ><button class="bt-card">Demo</button></a
+          >
         </div>
       </div>
       <div class="card">
         <img src="assets/redes.png" alt="" />
 
         <p>
-          Projeto desnvolvido, durante o curso de html5 e css3 no curso em video.
+          Projeto desnvolvido, durante o curso de html5 e css3 no curso em
+          video.
         </p>
 
         <div>
-          <a href="https://github.com/Jardel-Maciel/projeto_social" target="_blank"><button class="bt-card">GuitHub</button></a>
-          <a href="https://jardel-maciel.github.io/projeto_social/" target="_blank"><button class="bt-card">Demo</button></a>
+          <a
+            href="https://github.com/Jardel-Maciel/projeto_social"
+            target="_blank"
+            ><button class="bt-card">GuitHub</button></a
+          >
+          <a
+            href="https://jardel-maciel.github.io/projeto_social/"
+            target="_blank"
+            ><button class="bt-card">Demo</button></a
+          >
         </div>
       </div>
-   
-     
     </section>
 
     <section class="contatos" id="contatos">
@@ -164,7 +198,9 @@
           cols="50"
           placeholder="Digite sua mensagen aqui."
         ></textarea>
-        <button type="button" class="bt-card" onclick="enviarForm()">Enviar</button>
+        <button type="button" class="bt-card" onclick="enviarForm()">
+          Enviar
+        </button>
         <p id="mensagem"></p>
       </form>
     </section>
@@ -220,5 +256,13 @@
       const menu = document.querySelector(".menu");
       menu.classList.toggle("ativo");
     }
+    const linksMenu = document.querySelectorAll(".menu a");
+    const menu = document.querySelector(".menu");
+
+    linksMenu.forEach((link) => {
+      link.addEventListener("click", () => {
+        menu.classList.remove("ativo");
+      });
+    });
   </script>
 </html>
