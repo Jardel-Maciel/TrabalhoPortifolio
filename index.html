@@ -3,266 +3,262 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="style.css" />
-    <title>Jardel Maciel</title>
+    <title>Jardel Maciel — Engenheiro de Software</title>
   </head>
-  <body>
-    <header>
-      <nav class="navegation" id="navegation">
-        <a href="#home"
-          ><img src="assets/Logo.png" class="logo logo-clara"
-        /></a>
-        <a href="#home"
-          ><img src="assets/Logo-clara.png" class="logo logo-escura"
-        /></a>
-        <div class="hamburger" onclick="toggleMenu()">☰</div>
-        <ul class="menu">
-          <li><a href="#cont-sobre1">Sobre</a></li>
-          <li><a href="#formacao">Formação</a></li>
-          <li><a href="#portfolio">Portfólio</a></li>
-          <li><a href="#contatos">Contato</a></li>
-        </ul>
+  <body class="dark">
+    <div class="cursor" id="cursor"></div>
+    <div class="cursor-follower" id="cursor-follower"></div>
+
+    <header id="header">
+      <a href="#home" class="nav-logo">JM</a>
+      <nav class="nav-links">
+        <a href="#sobre">Sobre</a>
+        <a href="#formacao">Formação</a>
+        <a href="#portfolio">Portfólio</a>
+        <a href="#contatos">Contato</a>
       </nav>
-      <label for="tema" class="tema">Tema escuro</label>
-      <div class="container" onclick="toggle()">
-        <div id="seletor" class="seletor"></div>
-      </div>
+      <button class="theme-toggle" id="themeToggle" aria-label="Alternar tema">◐</button>
+      <button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Menu">
+        <span></span><span></span>
+      </button>
     </header>
-    <section class="home" id="home">
-      <img
-        src="assets/FotoPerfil/Foto-perfil.jpg"
-        alt="fotografia de jardel maciel desenvolvedor front-and"
-      />
-      <div>
-        <h3>Olá, eu sou Jardel.</h3>
-        <h1>
-          Engenheiro <br />
-          de software
-        </h1>
-        <a
-          href="https://drive.google.com/file/d/1cZ9_hvBirmq4CMJdnQ7T0UhSYmJT8Q_2/view?usp=drive_link"
-          target="_blank"
-        >
-          <button class="cssbuttons-io-button">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              width="20"
-              height="20"
-            >
-              <path fill="none" d="M0 0h24v24H0z"></path>
-              <path
-                fill="currentColor"
-                d="M1 14.5a6.496 6.496 0 0 1 3.064-5.519 8.001 8.001 0 0 1 15.872 0 6.5 6.5 0 0 1-2.936 12L7 21c-3.356-.274-6-3.078-6-6.5zm15.848 4.487a4.5 4.5 0 0 0 2.03-8.309l-.807-.503-.12-.942a6.001 6.001 0 0 0-11.903 0l-.12.942-.805.503a4.5 4.5 0 0 0 2.029 8.309l.173.013h9.35l.173-.013zM13 12h3l-4 5-4-5h3V8h2v4z"
-              ></path>
-            </svg>
-            <span>Baixar Curriculo</span>
-          </button>
-        </a>
-      </div>
-    </section>
 
-    <section class="cont-sobre1" id="cont-sobre1">
-      <article class="cont-sobre">
-        <h1>SOBRE.</h1>
-        <p>
-          Estudante de Ciência da Computação, em transição de carreira para a
-          área de tecnologia, com 9 anos de experiência profissional
-          desenvolvendo disciplina, organização e responsabilidade.
-          <br /><br />
-          Possuo conhecimentos em desenvolvimento front-end com HTML, CSS,
-          JavaScript e React.js com TypeScript, além de experiência em back-end
-          com Python e Java.
-          <br /><br />
-          Desenvolvi projetos práticos aplicando lógica de programação,
-          estrutura de dados e regras de negócio, incluindo sistemas de cálculo
-          de planos de saúde, controle de estoque, aplicação para pizzaria e
-          simulação de sistema bancário.
-        </p>
-      </article>
-    </section>
-    <section>
-      <article class="formacao" id="formacao">
-        <h1>FORMAÇÃO.</h1>
-        <p>Ciência Da Computação - 3º Semestre</p>
-      </article>
-    </section>
-    <div class="titulo-portfolio" id="portfolio">
-      <h1>PORTFÓLIO.</h1>
+    <div class="mobile-overlay" id="mobileOverlay">
+      <nav class="mobile-nav">
+        <a href="#sobre" onclick="closeMenu()">Sobre</a>
+        <a href="#formacao" onclick="closeMenu()">Formação</a>
+        <a href="#portfolio" onclick="closeMenu()">Portfólio</a>
+        <a href="#contatos" onclick="closeMenu()">Contato</a>
+      </nav>
     </div>
-    <section class="card-1">
-      <div class="card">
-        <img src="assets/cordel.png" alt="" />
 
-        <p>
-          Projeto desnvolvido, durante o curso de html5 e css3 no curso em
-          video.
-        </p>
-
-        <div class="button">
-          <a
-            href="https://github.com/Jardel-Maciel/projeto_cordel"
-            target="_blank"
-            ><button class="bt-card">GuitHub</button></a
-          >
-          <a
-            href="https://jardel-maciel.github.io/projeto_cordel/"
-            target="_blank"
-            ><button class="bt-card">Demo</button></a
-          >
+    <section class="home" id="home">
+      <div class="home-bg-text" aria-hidden="true">DEV</div>
+      <div class="home-content">
+        <div class="home-tag"><span class="dot"></span>Disponível para projetos</div>
+        <h1 class="home-title">
+          <span class="line">Jardel</span>
+          <span class="line accent">Maciel.</span>
+        </h1>
+        <p class="home-role">Engenheiro de <em>Software</em></p>
+        <div class="home-actions">
+          <a href="https://drive.google.com/file/d/1cZ9_hvBirmq4CMJdnQ7T0UhSYmJT8Q_2/view?usp=drive_link" target="_blank" class="btn-primary">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M13 12h3l-4 5-4-5h3V8h2v4zm-1-10C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/></svg>
+            Baixar Currículo
+          </a>
+          <a href="#portfolio" class="btn-ghost">Ver projetos →</a>
+        </div>
+        <div class="home-skills">
+          <span>HTML</span><span>CSS</span><span>JavaScript</span><span>React</span><span>TypeScript</span><span>Python</span><span>Java</span>
         </div>
       </div>
-
-      <div class="card">
-        <img src="assets/login.png" alt="" />
-
-        <p>
-          Projeto desnvolvido, durante o curso de html5 e css3 no curso em
-          video.
-        </p>
-
-        <div class="button">
-          <a
-            href="https://github.com/Jardel-Maciel/projeto_login"
-            target="_blank"
-            ><button class="bt-card">GuitHub</button></a
-          >
-
-          <a
-            href="https://jardel-maciel.github.io/projeto_login/"
-            target="_blank"
-            ><button class="bt-card">Demo</button></a
-          >
+      <div class="home-photo">
+        <div class="photo-frame">
+          <img src="assets/FotoPerfil/Foto-perfil.jpg" alt="Jardel Maciel" />
+          <div class="photo-border"></div>
+        </div>
+        <div class="photo-card">
+          <span class="photo-card-label">Ciência da Computação</span>
+          <span class="photo-card-value">3º Semestre</span>
         </div>
       </div>
-      <div class="card">
-        <img src="assets/maciel.png" alt="" />
+      <div class="scroll-hint"><div class="scroll-line"></div><span>scroll</span></div>
+    </section>
 
-        <p>
-          Projeto desnvolvido, durante o curso de html5 e css3 no curso em
-          video.
-        </p>
-
-        <div class="button">
-          <a
-            href="https://github.com/Jardel-Maciel/plano-de-saude2"
-            target="_blank"
-            ><button class="bt-card">GuitHub</button></a
-          >
-          <a
-            href="https://jardel-maciel.github.io/plano-de-saude2/"
-            target="_blank"
-            ><button class="bt-card">Demo</button></a
-          >
+    <section class="sobre" id="sobre">
+      <div class="sobre-inner">
+        <div class="section-label">01 — sobre</div>
+        <div class="sobre-grid">
+          <h2 class="section-title">Quem sou<br/><em>eu.</em></h2>
+          <div class="sobre-text">
+            <p>Estudante de Ciência da Computação em transição de carreira para a área de tecnologia, com <strong>9 anos de experiência profissional</strong> desenvolvendo disciplina, organização e responsabilidade.</p>
+            <p>Possuo conhecimentos em desenvolvimento front-end com HTML, CSS, JavaScript e React.js com TypeScript, além de experiência em back-end com Python e Java.</p>
+            <p>Desenvolvi projetos práticos aplicando lógica de programação, estrutura de dados e regras de negócio, incluindo sistemas de cálculo de planos de saúde, controle de estoque, aplicação para pizzaria e simulação de sistema bancário.</p>
+            <div class="sobre-stats">
+              <div class="stat"><span class="stat-num">9+</span><span class="stat-label">anos de exp.</span></div>
+              <div class="stat"><span class="stat-num">4+</span><span class="stat-label">projetos</span></div>
+              <div class="stat"><span class="stat-num">2</span><span class="stat-label">backends</span></div>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="card">
-        <img src="assets/redes.png" alt="" />
+    </section>
 
-        <p>
-          Projeto desnvolvido, durante o curso de html5 e css3 no curso em
-          video.
-        </p>
+    <section class="formacao" id="formacao">
+      <div class="formacao-inner">
+        <div class="section-label">02 — formação</div>
+        <div class="formacao-grid">
+          <h2 class="section-title">Educação &amp;<br/><em>Aprendizado.</em></h2>
+          <div class="formacao-cards">
+            <div class="edu-card">
+              <div class="edu-icon">🎓</div>
+              <div class="edu-info">
+                <span class="edu-period">2024 — cursando</span>
+                <h3>Ciência da Computação</h3>
+                <p>3º Semestre · Graduação</p>
+              </div>
+              <span class="edu-badge">Ativo</span>
+            </div>
+            <div class="edu-card">
+              <div class="edu-icon">💻</div>
+              <div class="edu-info">
+                <span class="edu-period">Curso prático</span>
+                <h3>HTML5 e CSS3</h3>
+                <p>Curso em Vídeo</p>
+              </div>
+              <span class="edu-badge edu-badge-done">Concluído</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-        <div>
-          <a
-            href="https://github.com/Jardel-Maciel/projeto_social"
-            target="_blank"
-            ><button class="bt-card">GuitHub</button></a
-          >
-          <a
-            href="https://jardel-maciel.github.io/projeto_social/"
-            target="_blank"
-            ><button class="bt-card">Demo</button></a
-          >
+    <section class="portfolio" id="portfolio">
+      <div class="portfolio-inner">
+        <div class="section-label">03 — portfólio</div>
+        <h2 class="section-title portfolio-title">Projetos<br/><em>selecionados.</em></h2>
+        <div class="projects-grid">
+          <article class="project-card">
+            <div class="project-img"><img src="assets/cordel.png" alt="Projeto Cordel" /><div class="project-overlay"><a href="https://jardel-maciel.github.io/projeto_cordel/" target="_blank" class="overlay-btn">Ver demo →</a></div></div>
+            <div class="project-info">
+              <div class="project-meta"><span class="project-num">01</span><span class="project-tag">HTML · CSS</span></div>
+              <h3>Projeto Cordel</h3>
+              <p>Desenvolvido durante o curso de HTML5 e CSS3 no Curso em Vídeo.</p>
+              <div class="project-links"><a href="https://github.com/Jardel-Maciel/projeto_cordel" target="_blank">GitHub ↗</a><a href="https://jardel-maciel.github.io/projeto_cordel/" target="_blank">Demo ↗</a></div>
+            </div>
+          </article>
+          <article class="project-card">
+            <div class="project-img"><img src="assets/login.png" alt="Projeto Login" /><div class="project-overlay"><a href="https://jardel-maciel.github.io/projeto_login/" target="_blank" class="overlay-btn">Ver demo →</a></div></div>
+            <div class="project-info">
+              <div class="project-meta"><span class="project-num">02</span><span class="project-tag">HTML · CSS</span></div>
+              <h3>Projeto Login</h3>
+              <p>Desenvolvido durante o curso de HTML5 e CSS3 no Curso em Vídeo.</p>
+              <div class="project-links"><a href="https://github.com/Jardel-Maciel/projeto_login" target="_blank">GitHub ↗</a><a href="https://jardel-maciel.github.io/projeto_login/" target="_blank">Demo ↗</a></div>
+            </div>
+          </article>
+          <article class="project-card">
+            <div class="project-img"><img src="assets/maciel-med.png" alt="Plano de Saúde" /><div class="project-overlay"><a href="https://jardel-maciel.github.io/plano-de-saude2/" target="_blank" class="overlay-btn">Ver demo →</a></div></div>
+            <div class="project-info">
+              <div class="project-meta"><span class="project-num">03</span><span class="project-tag">HTML · CSS · JS</span></div>
+              <h3>Plano de Saúde</h3>
+              <p>Sistema de cálculo com lógica de programação e regras de negócio.</p>
+              <div class="project-links"><a href="https://github.com/Jardel-Maciel/plano-de-saude2" target="_blank">GitHub ↗</a><a href="https://jardel-maciel.github.io/plano-de-saude2/" target="_blank">Demo ↗</a></div>
+            </div>
+          </article>
+          <article class="project-card">
+            <div class="project-img"><img src="assets/redes.png" alt="Projeto Social" /><div class="project-overlay"><a href="https://jardel-maciel.github.io/projeto_social/" target="_blank" class="overlay-btn">Ver demo →</a></div></div>
+            <div class="project-info">
+              <div class="project-meta"><span class="project-num">04</span><span class="project-tag">HTML · CSS</span></div>
+              <h3>Projeto Social</h3>
+              <p>Desenvolvido durante o curso de HTML5 e CSS3 no Curso em Vídeo.</p>
+              <div class="project-links"><a href="https://github.com/Jardel-Maciel/projeto_social" target="_blank">GitHub ↗</a><a href="https://jardel-maciel.github.io/projeto_social/" target="_blank">Demo ↗</a></div>
+            </div>
+          </article>
         </div>
       </div>
     </section>
 
     <section class="contatos" id="contatos">
-      <h1>CONTATOS</h1>
-
-      <form action="POST" class="form">
-        <input class="input" type="text" placeholder="Digite seu nome" />
-        <input
-          class="input"
-          type="email"
-          name="email"
-          id="email"
-          placeholder="Digite seu e-mail"
-        />
-        <textarea
-          name="msg"
-          id="msg"
-          rows="10"
-          cols="50"
-          placeholder="Digite sua mensagen aqui."
-        ></textarea>
-        <button type="button" class="bt-card" onclick="enviarForm()">
-          Enviar
-        </button>
-        <p id="mensagem"></p>
-      </form>
+      <div class="contatos-inner">
+        <div class="section-label">04 — contato</div>
+        <div class="contatos-grid">
+          <div class="contatos-left">
+            <h2 class="section-title">Vamos<br/><em>conversar.</em></h2>
+            <p class="contatos-desc">Tenho interesse em oportunidades de estágio, freelas e projetos colaborativos. Se tiver uma ideia ou projeto, entre em contato.</p>
+            <div class="social-links">
+              <a href="#" target="_blank" class="social-item"><img src="assets/IconesRedesSociais/linkedin.png" alt="LinkedIn" /><span>LinkedIn</span></a>
+              <a href="#" target="_blank" class="social-item"><img src="assets/IconesRedesSociais/instagram.png" alt="Instagram" /><span>Instagram</span></a>
+            </div>
+          </div>
+          <form class="form" id="contactForm">
+            <div class="form-group"><label for="nome">Nome</label><input class="input" type="text" id="nome" placeholder="Seu nome completo" /></div>
+            <div class="form-group"><label for="emailContact">E-mail</label><input class="input" type="email" id="emailContact" placeholder="seu@email.com" /></div>
+            <div class="form-group"><label for="msg">Mensagem</label><textarea name="msg" id="msg" rows="5" placeholder="Conte sobre seu projeto ou oportunidade..."></textarea></div>
+            <button type="button" class="btn-primary btn-send" onclick="enviarForm()">
+              Enviar mensagem
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+            </button>
+            <p id="mensagem" class="form-feedback"></p>
+          </form>
+        </div>
+      </div>
     </section>
-  </body>
-  <script>
-    function toggle() {
-      const container = document.querySelector(".container");
-      const body = document.body;
 
-      container.classList.toggle("ativo");
-      body.classList.toggle("dark");
-    }
+    <footer class="footer">
+      <div class="footer-inner">
+        <span class="footer-logo">JM</span>
+        <p>© 2025 Jardel Maciel · Desenvolvido com HTML, CSS &amp; JS</p>
+        <a href="#home" class="back-top">↑ Topo</a>
+      </div>
+    </footer>
 
-    let prevScrollpos = window.pageYOffset;
-
-    window.onscroll = function () {
-      let currentScrollPos = window.pageYOffset;
-      const nav = document.querySelector("header");
-
-      if (prevScrollpos > currentScrollPos) {
-        nav.style.top = "0";
-      } else {
-        nav.style.top = "-60px";
-      }
-
-      prevScrollpos = currentScrollPos;
-    };
-
-    function enviarForm() {
-      const nome = document.querySelector(".input[type='text']").value;
-      const email = document.getElementById("email").value;
-      const msg = document.getElementById("msg").value;
-
-      // validação simples
-      if (nome === "" || email === "" || msg === "") {
-        alert("Preencha todos os campos!");
-        return;
-      }
-
-      // validação básica de email
-      if (!email.includes("@") || !email.includes(".")) {
-        alert("Digite um e-mail válido!");
-        return;
-      }
-
-      // simulação de envio
-      alert("Mensagem enviada com sucesso! 🚀");
-
-      // limpa o formulário
-      document.querySelector(".form").reset();
-    }
-    function toggleMenu() {
-      const menu = document.querySelector(".menu");
-      menu.classList.toggle("ativo");
-    }
-    const linksMenu = document.querySelectorAll(".menu a");
-    const menu = document.querySelector(".menu");
-
-    linksMenu.forEach((link) => {
-      link.addEventListener("click", () => {
-        menu.classList.remove("ativo");
+    <script>
+      const themeToggle = document.getElementById('themeToggle');
+      themeToggle.addEventListener('click', () => {
+        document.body.classList.toggle('dark');
       });
-    });
-  </script>
+
+      let prevScroll = window.pageYOffset;
+      const header = document.getElementById('header');
+      window.addEventListener('scroll', () => {
+        const curr = window.pageYOffset;
+        header.style.transform = curr > prevScroll && curr > 80 ? 'translateY(-100%)' : 'translateY(0)';
+        header.classList.toggle('scrolled', curr > 40);
+        prevScroll = curr;
+      });
+
+      function toggleMenu() {
+        document.getElementById('mobileOverlay').classList.toggle('open');
+        document.getElementById('hamburger').classList.toggle('open');
+      }
+      function closeMenu() {
+        document.getElementById('mobileOverlay').classList.remove('open');
+        document.getElementById('hamburger').classList.remove('open');
+      }
+
+      const cursor = document.getElementById('cursor');
+      const follower = document.getElementById('cursor-follower');
+      let fx = 0, fy = 0, mx = 0, my = 0;
+      document.addEventListener('mousemove', e => {
+        mx = e.clientX; my = e.clientY;
+        cursor.style.transform = `translate(${mx - 5}px,${my - 5}px)`;
+      });
+      function animateF() {
+        fx += (mx - fx) * 0.1; fy += (my - fy) * 0.1;
+        follower.style.transform = `translate(${fx - 20}px,${fy - 20}px)`;
+        requestAnimationFrame(animateF);
+      }
+      animateF();
+      document.querySelectorAll('a,button,.project-card').forEach(el => {
+        el.addEventListener('mouseenter', () => { follower.classList.add('hover'); cursor.classList.add('hover'); });
+        el.addEventListener('mouseleave', () => { follower.classList.remove('hover'); cursor.classList.remove('hover'); });
+      });
+
+      const observer = new IntersectionObserver(entries => {
+        entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+      }, { threshold: 0.1 });
+      document.querySelectorAll('.project-card, .edu-card, .stat, .sobre-grid').forEach(el => observer.observe(el));
+
+      document.querySelectorAll('.home-skills span').forEach((el, i) => {
+        el.style.animationDelay = `${0.9 + i * 0.07}s`;
+      });
+
+      function enviarForm() {
+        const nome = document.getElementById('nome').value.trim();
+        const email = document.getElementById('emailContact').value.trim();
+        const msg = document.getElementById('msg').value.trim();
+        const feedback = document.getElementById('mensagem');
+        if (!nome || !email || !msg) { feedback.textContent = '⚠ Preencha todos os campos.'; feedback.className = 'form-feedback error'; return; }
+        if (!email.includes('@') || !email.includes('.')) { feedback.textContent = '⚠ E-mail inválido.'; feedback.className = 'form-feedback error'; return; }
+        feedback.textContent = '✓ Mensagem enviada! Entrarei em contato em breve.';
+        feedback.className = 'form-feedback success';
+        document.getElementById('contactForm').reset();
+        setTimeout(() => { feedback.textContent = ''; }, 5000);
+      }
+    </script>
+  </body>
 </html>
